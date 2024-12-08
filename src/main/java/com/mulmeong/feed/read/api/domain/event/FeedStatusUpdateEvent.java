@@ -18,6 +18,7 @@ public class FeedStatusUpdateEvent {
 
     public Feed toDocument(Feed existingFeed) {
         return Feed.builder()
+            .id(existingFeed.getId())
             .feedUuid(feedUuid)
             .memberUuid(existingFeed.getMemberUuid())
             .title(existingFeed.getTitle())

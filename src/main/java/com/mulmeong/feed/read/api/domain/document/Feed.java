@@ -34,11 +34,12 @@ public class Feed {
     private LocalDateTime updatedAt;
 
     @Builder
-    public Feed(String feedUuid, String memberUuid, String title, String content,
+    public Feed(String id, String feedUuid, String memberUuid, String title, String content,
         String categoryName, Visibility visibility, List<Hashtag> hashtags, List<Media> mediaList,
         Long likeCount, Long dislikeCount, Long netLikes, Long commentCount,
         LocalDateTime createdAt, LocalDateTime updatedAt) {
 
+        this.id = id;
         this.feedUuid = feedUuid;
         this.memberUuid = memberUuid;
         this.title = title;
